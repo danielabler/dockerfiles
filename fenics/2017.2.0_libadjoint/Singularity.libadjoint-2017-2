@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: danabl/glimslib:2017.2
+From: danabl/glimslib:libadjoint-2017-2
 
 %post
     ldconfig

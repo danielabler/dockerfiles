@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: danabl/glimslib:2017.2_ants_meshtool
+From: danabl/glimslib:libadjoint-2017-2_ants_meshtool
 
 %post
     ldconfig
