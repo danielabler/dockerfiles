@@ -1,5 +1,5 @@
 # Dockerfile for GlimS based on dolfinadjoint/libadjoint
-FROM FROM danabl/glimslib:2017.2_ants
+FROM danabl/glimslib:libadjoint-2017-2_ants
 
 # Set the working directory
 WORKDIR /shared
