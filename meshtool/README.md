@@ -88,21 +88,20 @@ See the [singularity](https://sylabs.io/docs/) pages for setup.
 
 ### Use Built Image
 
-A built version of this image is available on [singularity hub](https://singularity-hub.org/) at:
-XXX
+A built version of this image is available on [singularity hub](https://singularity-hub.org/). 
 
 You can download this image by:
 
 ```
-docker pull danabl/meshtool:latest
-```  
+singularity run shub://danielabler/dockerfiles:meshtool
+```
 
 ### Building Image
 Enter the directory where this readme file is located.
-Build the singularity image with name *meshtool.img* by
+Build the singularity image with name *meshtool.sif* by
 
 ```
-    sudo singularity build meshtool.img Singularity.meshtool
+    sudo singularity build meshtool.sif Singularity.meshtool
 ```
 
 ### Running MeshTool from Singularity Image
@@ -110,7 +109,7 @@ Build the singularity image with name *meshtool.img* by
 You can enter a shell in the singularity container by
 
 ```
-singularity shell -e /path/to/meshtool.img
+singularity shell -e /path/to/meshtool.sif
 ```
 
 After executing this command you will have access to and can navigate through the entire host file system.
