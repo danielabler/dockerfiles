@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserIntentions mediaName="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" mediaVersion="421">
+  <SetVariable name="DSYWelcomePanel"/>
+  <!--EXALEAD CloudView-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="EXALEAD_CloudView.Linux64_1.2" name="SelectProduct" value="false"/>
+  <!--EXALEAD Search for Documentation-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="Search_Doc.Linux64_2.2" name="SelectProduct" value="false"/>
+  <!--Extended Product Documentation-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="DOC_SIM_EstPrd.AllOS_3.1" name="SelectProduct" value="false"/>
+  <!--FLEXnet License Server-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Flexnet.Linux64_4.2" name="SelectProduct" value="false"/>
+  <!--Abaqus Simulation Services-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_AbaqusServices.Linux64_5.2" name="SelectProduct" value="true"/>
+  <!--Abaqus Simulation Services CAA API-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="CAA_SIMULIA_AbaqusServices.Linux64_6.2" name="SelectProduct" value="true"/>
+  <!--Abaqus/CAE-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Abaqus_CAE.Linux64_7.2" name="SelectProduct" value="true"/>
+  <!--fe-safe-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_fesafe.Linux64_8.2" name="SelectProduct" value="true"/>
+  <!--Tosca-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Tosca.Linux64_9.2" name="SelectProduct" value="false"/>
+  <!--Isight-->
+  <SetVariable fromMedia="CODE\linux_a64\AM_SIM_Abaqus_Extend.media" item="SIMULIA_Isight.Linux64_10.2" name="SelectProduct" value="false"/>
+  <SetVariable itId="SIMULIA_Compute" name="TARGET_PATH" value="/home/abquser/software/DassaultSystemes/SimulationServices/V6R2019x"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" item="CODE\linux_a64\SIMAQSL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" item="CODE\linux_a64\SIMAQXL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" item="CODE\linux_a64\SIMCSS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" item="CODE\linux_a64\SIMODB_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_AbaqusServices.media" name="FinishPanel"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" item="CAA\linux_a64\SIMAQSL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" item="CAA\linux_a64\SIMAQXL_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" item="CAA\linux_a64\SIMCSS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" item="CAA\linux_a64\SIMODB_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CAA\linux_a64\SIMULIA_AbaqusServices.media" name="FinishPanel"/>
+  <SetVariable item="skip" name="serverType_radioButton" value="true"/>
+  <SetVariable name="browseAnyway_differentSolver" value="/home/abquser/software/DassaultSystemes/SimulationServices/V6R2019x"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_Abaqus_CAE.media" name="commandsDir" value="/home/abquser/software/DassaultSystemes/SIMULIA/Commands"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_Abaqus_CAE.media" name="pluginsDir" value="/home/abquser/software/DassaultSystemes/SIMULIA/CAE/plugins/2019"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_Abaqus_CAE.media" item="docConfigType_none" name="docConfigType" value="true"/>
+  <SetVariable itId="SIMULIA_Abaqus_CAE" name="TARGET_PATH" value="/home/abquser/software/SIMULIA/CAE/2019"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_Abaqus_CAE.media" name="FinishPanel"/>
+  <SetVariable itId="SIMULIA_fesafe" name="TARGET_PATH" value="/home/abquser/software/SIMULIA/fe-safe/2019"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFESD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFS19_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFS18_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFS17_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFS16_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFS14_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSMD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSMS_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSTD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSAD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSID_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSRD_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" item="CODE\linux_a64\SIMFSND_TP.prd" name="SelectProduct" value="true"/>
+  <SetVariable fromMedia="CODE\linux_a64\SIMULIA_fesafe.media" name="FinishPanel"/>
+</UserIntentions>
