@@ -18,32 +18,33 @@ so that those steps can me merged in the future.
 The Dockerfile in this folder provides you with a recent Ubuntu system, including abaqus requirements and a dedicated Abaqus user.
 
 ```shell script
-    docker build -t meshtool linux_for_abaqus .
+    docker build -t linux_for_abaqus .
 ```
 
 You create and access a container from this image by:
 
 ```shell script
     docker run --name linux_abq -w /shared -v /PATH/TO/SHARED/DIR/ON/HOST/:/shared -dit linux_for_abaqus
-    docker attach abq
+    docker attach linux_abq
 ```
 
 ### Install Abaqus
 
 To install Abaqus, enter the docker container as explained above.
-Make the file `abq_install.sh` available by copying to the shared folder and execute by
+Make the file `abq_install.sh` and `abq_choices_custom.xml` available by copying to the shared folder and execute by
 
 ```shell script
     sh abq_install.sh
 ```
 
-After execution, a folder */home/abquser/software/DassaultSystemes* should exist.
-Open another terminal to identify the id of this container by calling `docker ps`.
-Copy this id, leave the container (`exit`) and stop it (`docker stop abq`).
+After execution, a folder */home/abquser/software/DassaultSystemes* should exist in the docker container.
  
 ### Commit Changes to Container
 
-To make the installation permanent, we will now [create an image from this container](https://docs.docker.com/engine/reference/commandline/commit/):
+To make the installation permanent, we will now [create an image from this container](https://docs.docker.com/engine/reference/commandline/commit/).
+
+Open another terminal to identify the id of the running container *linux_abq* by calling `docker ps`.
+Copy this id, leave the container (`exit`) and stop it (`docker stop linux_abq`).
 
 ```shell script
     docker commit -m "installed abaqus" <container-id> abaqus_img
@@ -52,11 +53,12 @@ To make the installation permanent, we will now [create an image from this conta
 ### Use abaqus image
 
 You can now run this image.
-With these settings, graphics forwarding to the host works on linux:
+Use the following options to run the container with graphics support on linux:
 
 ```shell script
-  docker run --name abq -w /shared -v ~/PATH/TO/SHARED/DIR/ON/HOST/:/shared -dit --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" abaqus_img
-
+  docker run --name abq -w /shared -v /PATH/TO/SHARED/DIR/ON/HOST/:/shared -dit --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" abaqus_img
+  
+  docker attach abq
 ```
 
 ## Singularity Image
@@ -84,5 +86,11 @@ This image can be accessed using:
 
 ```shell script
     singularity shell -e abaqus.simg
+```
+
+Path settings from docker do not work in this singularity image.
+To run abaqus:
+```
+    /home/abquser/software/DassaultSystemes/SIMULIA/Commands/abaqus
 ```
 
