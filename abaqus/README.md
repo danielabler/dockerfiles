@@ -61,6 +61,19 @@ Use the following options to run the container with graphics support on linux:
   docker attach abq
 ```
 
+On MacOS, the following steps should enable graphics support:
+
+* Before connecting to the container, run socat:
+  ```
+  socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+  ```
+
+* Connect by
+  ```
+  docker run --name abq -w /shared -v /PATH/TO/SHARED/DIR/ON/HOST/:/shared -dit DISPLAY=<your-ip>:0 abaqus_img
+  ```
+  where *<your-ip>* is the current IP of your machine.
+
 ## Singularity Image
 
 To create a singularity image from a local docker image, we need to start a docker registry:
