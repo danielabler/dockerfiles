@@ -29,4 +29,16 @@ RUN echo "Installing MeshTool..." && \
     cmake -DCMAKE_INSTALL_PREFIX=${MESHTOOL_INSTALL_DIR} -DCGAL_DIR=${CGAL_BUILD_DIR} -DVTK_DIR=${VTK_BUILD_DIR} -DXERCESC_ROOT_DIR=${XERCES_INSTALL_DIR} -DXSD_DIR=${XSD_INSTALL_DIR}/libxsd ${MESHTOOL_SOURCE_DIR} &&\
     make -j4 && \
     make install
+    
+RUN echo "Installing MINICONDA ..." && \
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ${INST_DIR}/miniconda.sh && \
+    bash ${INST_DIR}/miniconda.sh -b -p ${INST_DIR}/miniconda && \
+    rm ${INST_DIR}/miniconda.sh
+    
+#ENV PATH=${INST_DIR}/miniconda/bin:${PATH}
 
+RUN echo "Setup up python env for MeshTool postprocessing..." && \
+    export PATH=${INST_DIR}/miniconda/bin:${PATH} && \
+    conda env create -f ${MESHTOOL_SOURCE_DIR}/pre-post-processing/conda-environment.yaml 
+
+ENV PATH="${INST_DIR}/miniconda/envs/meshtoolenv/bin:${PATH}"
