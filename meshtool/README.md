@@ -79,6 +79,13 @@ run `MeshTool` from any arbitrary location in the docker file system, including 
 
 ```
 ./MeshTool -c \path\to\config_file.xml -m 'image'
+./MeshTool -c \path\to\config_file.xml -m cornea
+```
+
+A python conversion script from generated `vtu` to abaqus `inp` input files is avaible at _/home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py_ (tested for cornea meshes) and can used by:
+
+```
+python /home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py -i <path_to_vtu_input> -o <path_to_inp_output>
 ```
 
 
@@ -124,7 +131,14 @@ Since the `MeshTool` command has been added to the `PATH` variable in the singul
 run `MeshTool` from any arbitrary location in your file system.
 
 ```
-./MeshTool -c \path\to\config_file.xml -m 'image'
+./MeshTool -c \path\to\config_file.xml -m image
+./MeshTool -c \path\to\config_file.xml -m cornea
+```
+
+A python conversion script from generated `vtu` to abaqus `inp` input files is avaible at _/home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py_ (tested for cornea meshes) and can used by:
+
+```
+python /home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py -i <host_path_to_vtu_input> -o <host_path_to_inp_output>
 ```
 
 Leave the singularity shell again with `exit`.
