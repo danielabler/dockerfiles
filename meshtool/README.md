@@ -127,18 +127,17 @@ to install MeshTool, e.g.
 ls /home/mesher/software
 ```
 
-Since the `MeshTool` command has been added to the `PATH` variable in the singularity image, you will be able to 
-run `MeshTool` from any arbitrary location in your file system.
+The `MeshTool` binary is located in `/home/mesher/software/MESHTOOL_source`. To run the comment you need to specify the full path to this file on your local system, i.e.
 
 ```
-./MeshTool -c \path\to\config_file.xml -m image
-./MeshTool -c \path\to\config_file.xml -m cornea
+/home/mesher/software/MESHTOOL_source/MeshTool -c /path/to/config_file.xml -m image
+/home/mesher/software/MESHTOOL_source/MeshTool -c /path/to/config_file.xml -m cornea
 ```
+Writing to the current singularity image seems not be possible, therefore note that the demos in `test-data` will fail at the file saving step.
 
-A python conversion script from generated `vtu` to abaqus `inp` input files is avaible at _/home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py_ (tested for cornea meshes) and can used by:
-
-```
-python /home/mesher/software/MESHTOOL_source/pre-post-processing/create_abq.py -i <host_path_to_vtu_input> -o <host_path_to_inp_output>
-```
+For testing:
+- copy the files from https://github.com/danielabler/meshtool/tree/master/test-data to a local directory `/local/path/test-data/`
+- edit the config file that you like to use and adapt the path settings to absolute paths
+  - for mesh creation from image: edit `path_to_input_file` and `path_to_output_file`
 
 Leave the singularity shell again with `exit`.
