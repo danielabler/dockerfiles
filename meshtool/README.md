@@ -137,7 +137,12 @@ Writing to the current singularity image seems not be possible, therefore note t
 
 For testing:
 - copy the files from https://github.com/danielabler/meshtool/tree/master/test-data to a local directory `/local/path/test-data/`
-- edit the config file that you like to use and adapt the path settings to absolute paths
+- edit the config file that you like to use and adapt the path settings to absolute paths that point to a location where you haev write access.
   - for mesh creation from image: edit `path_to_input_file` and `path_to_output_file`
+
+Run by executing
+```
+/home/mesher/software/MESHTOOL_source/MeshTool -c /local/path/test-data/path/to/config_file.xml -m image
+```
 
 Leave the singularity shell again with `exit`.
